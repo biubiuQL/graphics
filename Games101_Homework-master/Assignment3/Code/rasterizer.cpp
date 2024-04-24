@@ -7,7 +7,7 @@
 #include <opencv2/opencv.hpp>
 #include <cmath>
 
-const bool SSAA = false;
+const bool MSAA = false;
 
 rst::pos_buf_id rst::rasterizer::load_positions(const std::vector<Eigen::Vector3f> &positions) {
     auto id = get_next_id();
@@ -220,7 +220,7 @@ void rst::rasterizer::draw(std::vector<Triangle *> &TriangleList) {
         rasterize_triangle(newtri, viewspace_pos);
     }
 
-    if (SSAA) {
+    if (MSAA) {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 Eigen::Vector2i p = {(float) x, (float) y};
@@ -288,7 +288,7 @@ void rst::rasterizer::rasterize_triangle(const Triangle &t, const std::array<Eig
     for (int x = min_x; x <= max_x; x++) {
         for (int y = min_y; y <= max_y; y++) {
             // SSAA抗锯齿后没有明显效果，运行时间从原来的 8秒变为 26秒
-            if (SSAA) {
+            if (MSAA) {
                 int index = 0;
                 // 划分四个小的像素
                 for (float i = 0.25; i < 1.0; i += 0.5) {

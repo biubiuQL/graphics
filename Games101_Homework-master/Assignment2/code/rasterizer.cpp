@@ -9,7 +9,8 @@
 #include <opencv2/opencv.hpp>
 #include <cmath>
 
-#define SSAA false
+// Multi sampling anti aliasing  多重采样反锯齿
+#define MSAA false
 
 rst::pos_buf_id rst::rasterizer::load_positions(const std::vector<Eigen::Vector3f> &positions) {
     auto id = get_next_id();
@@ -123,7 +124,7 @@ void rst::rasterizer::draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, col_buf
 
     }
 
-    if (SSAA) {
+    if (MSAA) {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 Eigen::Vector3f color(0, 0, 0);
@@ -166,7 +167,7 @@ void rst::rasterizer::rasterize_triangle(const Triangle &t) {
                 continue;
             }
 
-            if (SSAA) {
+            if (MSAA) {
                 int index = 0;
                 // 划分四个小的像素
                 for (float i = 0.25; i < 1.0; i += 0.5) {
