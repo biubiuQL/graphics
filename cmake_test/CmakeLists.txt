@@ -1,0 +1,13 @@
+
+
+# add_executable(main Main.cpp)
+
+
+# 在指定目录中查找源文件并将结果存储在变量SRC中
+aux_source_directory(${PROJECT_SOURCE_DIR} SRC)
+
+# include_directories(${PROJECT_SOURCE_DIR}/include)
+
+message(STATUS "SRC: ${PROJECT_SOURCE_DIR}")
+
+
