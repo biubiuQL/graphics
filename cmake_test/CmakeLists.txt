@@ -1,13 +1,37 @@
 
 
-# add_executable(main Main.cpp)
+
+cmake_minimum_required(VERSION 3.10)
+
+# 在指定目录中查找源文件并将结果存储在变量SRC中 auxiliary
+aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+# add_library(add SHARED ${SRC})
+
+# add_library(add STATIC ${SRC})
+
+# 静态库连接
+
+# link_libraries(add)
+
+# end
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 
-# 在指定目录中查找源文件并将结果存储在变量SRC中
-aux_source_directory(${PROJECT_SOURCE_DIR} SRC)
 
-# include_directories(${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(main add)
+add_executable(main Main.cpp)
 
-message(STATUS "SRC: ${PROJECT_SOURCE_DIR}")
+# 动态库连接
+
+
+# target_link_directories(${PROJECT_SOURCE_DIR}/lib)
+
+# end
+
+
+# message(STATUS "SRC: ${PROJECT_SOURCE_DIR}")
 
 

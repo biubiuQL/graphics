@@ -1,2 +1,0 @@
-C:/Users/admin/Documents/graphics/cmake_test/build/CMakeFiles/edit_cache.dir
-C:/Users/admin/Documents/graphics/cmake_test/build/CMakeFiles/rebuild_cache.dir
