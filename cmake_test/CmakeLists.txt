@@ -17,17 +17,18 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 # link_libraries(add)
 
 # end
+
+message(STATUS "--------${CMAKE_CURRENT_SOURCE_DIR}")
+message(STATUS "--------${PROJECT_BINARY_DIR}")
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 
 
-target_link_libraries(main add)
-add_executable(main Main.cpp)
+add_executable(hao Main.cpp)
+target_link_libraries(hao add)
 
 # 动态库连接
 
-
-# target_link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 # end
 
