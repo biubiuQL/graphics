@@ -1,3 +1,7 @@
+C:/Users/admin/Documents/graphics/cmake_test/build/CMakeFiles/add.dir
 C:/Users/admin/Documents/graphics/cmake_test/build/CMakeFiles/hao.dir
 C:/Users/admin/Documents/graphics/cmake_test/build/CMakeFiles/edit_cache.dir
 C:/Users/admin/Documents/graphics/cmake_test/build/CMakeFiles/rebuild_cache.dir
+C:/Users/admin/Documents/graphics/cmake_test/build/Math/CMakeFiles/Math.dir
+C:/Users/admin/Documents/graphics/cmake_test/build/Math/CMakeFiles/edit_cache.dir
+C:/Users/admin/Documents/graphics/cmake_test/build/Math/CMakeFiles/rebuild_cache.dir

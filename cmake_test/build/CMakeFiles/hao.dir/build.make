@@ -92,6 +92,8 @@ hao_EXTERNAL_OBJECTS =
 
 hao.exe: CMakeFiles/hao.dir/Main.cpp.obj
 hao.exe: CMakeFiles/hao.dir/build.make
+hao.exe: libadd.dll.a
+hao.exe: Math/libMath.dll.a
 hao.exe: CMakeFiles/hao.dir/linklibs.rsp
 hao.exe: CMakeFiles/hao.dir/objects1.rsp
 hao.exe: CMakeFiles/hao.dir/link.txt

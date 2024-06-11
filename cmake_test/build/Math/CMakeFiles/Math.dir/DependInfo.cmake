@@ -8,13 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/admin/Documents/graphics/cmake_test/Main.cpp" "CMakeFiles/hao.dir/Main.cpp.obj" "gcc" "CMakeFiles/hao.dir/Main.cpp.obj.d"
+  "C:/Users/admin/Documents/graphics/cmake_test/Math/src/sub.cpp" "Math/CMakeFiles/Math.dir/src/sub.cpp.obj" "gcc" "Math/CMakeFiles/Math.dir/src/sub.cpp.obj.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/admin/Documents/graphics/cmake_test/build/CMakeFiles/add.dir/DependInfo.cmake"
-  "C:/Users/admin/Documents/graphics/cmake_test/build/Math/CMakeFiles/Math.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

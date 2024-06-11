@@ -8,7 +8,7 @@ aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# add_library(add SHARED ${SRC})
+add_library(add SHARED ${SRC})
 
 # add_library(add STATIC ${SRC})
 
@@ -18,6 +18,9 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # end
 
+
+add_subdirectory(Math)
+
 message(STATUS "--------${CMAKE_CURRENT_SOURCE_DIR}")
 message(STATUS "--------${PROJECT_BINARY_DIR}")
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
@@ -25,8 +28,10 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 
 add_executable(hao Main.cpp)
-target_link_libraries(hao add)
+target_link_libraries(hao add Math)
 
+set(a 1)
+message(STATUS "a: ${a}")
 # 动态库连接
 
 

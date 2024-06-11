@@ -101,6 +101,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.20/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-3.20/Modules/Platform/WindowsPaths.cmake"
   "../CMakeLists.txt"
+  "../Math/CMakeLists.txt"
   "CMakeFiles/3.20.0-rc1/CMakeCCompiler.cmake"
   "CMakeFiles/3.20.0-rc1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.20.0-rc1/CMakeRCCompiler.cmake"
@@ -122,9 +123,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.20.0-rc1/CMakeCCompiler.cmake"
   "CMakeFiles/3.20.0-rc1/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Math/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/add.dir/DependInfo.cmake"
   "CMakeFiles/hao.dir/DependInfo.cmake"
+  "Math/CMakeFiles/Math.dir/DependInfo.cmake"
   )

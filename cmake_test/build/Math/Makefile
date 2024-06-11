@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles C:\Users\admin\Documents\graphics\cmake_test\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles C:\Users\admin\Documents\graphics\cmake_test\build\Math\\CMakeFiles\progress.marks
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Math/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Math/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,105 +102,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Math/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Math/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named add
+# Convenience name for target.
+Math/CMakeFiles/Math.dir/rule:
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Math/CMakeFiles/Math.dir/rule
+.PHONY : Math/CMakeFiles/Math.dir/rule
 
-# Build rule for target.
-add: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 add
-.PHONY : add
-
-# fast build rule for target.
-add/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/build
-.PHONY : add/fast
-
-#=============================================================================
-# Target rules for targets named hao
-
-# Build rule for target.
-hao: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 hao
-.PHONY : hao
-
-# fast build rule for target.
-hao/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hao.dir\build.make CMakeFiles/hao.dir/build
-.PHONY : hao/fast
-
-#=============================================================================
-# Target rules for targets named Math
-
-# Build rule for target.
-Math: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Math
+# Convenience name for target.
+Math: Math/CMakeFiles/Math.dir/rule
 .PHONY : Math
 
 # fast build rule for target.
 Math/fast:
-	$(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/build
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/build
 .PHONY : Math/fast
 
-Main.obj: Main.cpp.obj
-.PHONY : Main.obj
+src/sub.obj: src/sub.cpp.obj
+.PHONY : src/sub.obj
 
 # target to build an object file
-Main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hao.dir\build.make CMakeFiles/hao.dir/Main.cpp.obj
-.PHONY : Main.cpp.obj
+src/sub.cpp.obj:
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/src/sub.cpp.obj
+.PHONY : src/sub.cpp.obj
 
-Main.i: Main.cpp.i
-.PHONY : Main.i
-
-# target to preprocess a source file
-Main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hao.dir\build.make CMakeFiles/hao.dir/Main.cpp.i
-.PHONY : Main.cpp.i
-
-Main.s: Main.cpp.s
-.PHONY : Main.s
-
-# target to generate assembly for a file
-Main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hao.dir\build.make CMakeFiles/hao.dir/Main.cpp.s
-.PHONY : Main.cpp.s
-
-src/add.obj: src/add.cpp.obj
-.PHONY : src/add.obj
-
-# target to build an object file
-src/add.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/src/add.cpp.obj
-.PHONY : src/add.cpp.obj
-
-src/add.i: src/add.cpp.i
-.PHONY : src/add.i
+src/sub.i: src/sub.cpp.i
+.PHONY : src/sub.i
 
 # target to preprocess a source file
-src/add.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/src/add.cpp.i
-.PHONY : src/add.cpp.i
+src/sub.cpp.i:
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/src/sub.cpp.i
+.PHONY : src/sub.cpp.i
 
-src/add.s: src/add.cpp.s
-.PHONY : src/add.s
+src/sub.s: src/sub.cpp.s
+.PHONY : src/sub.s
 
 # target to generate assembly for a file
-src/add.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/src/add.cpp.s
-.PHONY : src/add.cpp.s
+src/sub.cpp.s:
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/src/sub.cpp.s
+.PHONY : src/sub.cpp.s
 
 # Help Target
 help:
@@ -211,14 +162,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Math
-	@echo ... add
-	@echo ... hao
-	@echo ... Main.obj
-	@echo ... Main.i
-	@echo ... Main.s
-	@echo ... src/add.obj
-	@echo ... src/add.i
-	@echo ... src/add.s
+	@echo ... src/sub.obj
+	@echo ... src/sub.i
+	@echo ... src/sub.s
 .PHONY : help
 
 
@@ -230,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\admin\Documents\graphics\cmake_test\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

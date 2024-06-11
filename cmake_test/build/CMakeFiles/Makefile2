@@ -62,30 +62,76 @@ CMAKE_BINARY_DIR = C:\Users\admin\Documents\graphics\cmake_test\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/add.dir/all
 all: CMakeFiles/hao.dir/all
+all: Math/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: Math/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/add.dir/clean
 clean: CMakeFiles/hao.dir/clean
+clean: Math/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Math
+
+# Recursive "all" directory target.
+Math/all: Math/CMakeFiles/Math.dir/all
+.PHONY : Math/all
+
+# Recursive "preinstall" directory target.
+Math/preinstall:
+.PHONY : Math/preinstall
+
+# Recursive "clean" directory target.
+Math/clean: Math/CMakeFiles/Math.dir/clean
+.PHONY : Math/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/add.dir
+
+# All Build rule for target.
+CMakeFiles/add.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles --progress-num=3,4 "Built target add"
+.PHONY : CMakeFiles/add.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/add.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/add.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 0
+.PHONY : CMakeFiles/add.dir/rule
+
+# Convenience name for target.
+add: CMakeFiles/add.dir/rule
+.PHONY : add
+
+# clean rule for target.
+CMakeFiles/add.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/clean
+.PHONY : CMakeFiles/add.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/hao.dir
 
 # All Build rule for target.
-CMakeFiles/hao.dir/all:
+CMakeFiles/hao.dir/all: Math/CMakeFiles/Math.dir/all
+CMakeFiles/hao.dir/all: CMakeFiles/add.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hao.dir\build.make CMakeFiles/hao.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hao.dir\build.make CMakeFiles/hao.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles --progress-num=1,2 "Built target hao"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles --progress-num=5,6 "Built target hao"
 .PHONY : CMakeFiles/hao.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hao.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/hao.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 0
 .PHONY : CMakeFiles/hao.dir/rule
@@ -98,6 +144,32 @@ hao: CMakeFiles/hao.dir/rule
 CMakeFiles/hao.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hao.dir\build.make CMakeFiles/hao.dir/clean
 .PHONY : CMakeFiles/hao.dir/clean
+
+#=============================================================================
+# Target rules for target Math/CMakeFiles/Math.dir
+
+# All Build rule for target.
+Math/CMakeFiles/Math.dir/all:
+	$(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/depend
+	$(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles --progress-num=1,2 "Built target Math"
+.PHONY : Math/CMakeFiles/Math.dir/all
+
+# Build rule for subdir invocation for target.
+Math/CMakeFiles/Math.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Math/CMakeFiles/Math.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\admin\Documents\graphics\cmake_test\build\CMakeFiles 0
+.PHONY : Math/CMakeFiles/Math.dir/rule
+
+# Convenience name for target.
+Math: Math/CMakeFiles/Math.dir/rule
+.PHONY : Math
+
+# clean rule for target.
+Math/CMakeFiles/Math.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Math\CMakeFiles\Math.dir\build.make Math/CMakeFiles/Math.dir/clean
+.PHONY : Math/CMakeFiles/Math.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
